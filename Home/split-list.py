@@ -9,3 +9,11 @@ def split_list(items: list) -> list:
         new_list = [items[:value_len + 1], items[value_len + 1:]]
 
     return new_list
+
+def split_list(items):
+    pivot = -(-len(items)//2)
+    return [items[:pivot],items[pivot:]]
+
+def split_list(items: list) -> list:
+    mid = (len(items) + 1) // 2
+    return [items[:mid], items[mid:]]
