@@ -64,3 +64,10 @@ assert (
 )
 
 print("The mission is done! Click 'Check Solution' to earn rewards!")
+
+morse_decoder = lambda code: "".join([MORSE[i] for i in code.replace("   ", " + ").split()]).capitalize()
+
+def morse_decoder(code):
+    return re.sub(' ?(\S+) ?', lambda m: morse[m.group(1)], code).capitalize()
+
+morse_decoder = lambda c: ''.join([MORSE[i] for i in c.replace('   ', '  ').split(" ")]).capitalize()
