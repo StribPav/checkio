@@ -18,6 +18,9 @@ def sum_light(els: List[datetime]) -> int:
 
     return int(sum(delta_list))
 
+def sum_light(els: List[datetime]) -> int:
+    return int(sum([(els[i+1] - els[i]).total_seconds() for i in range(0, len(els), 2)]))
+
 
 if __name__ == "__main__":
     print("Example:")
